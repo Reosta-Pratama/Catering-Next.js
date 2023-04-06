@@ -1,12 +1,25 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faXmark, faBars} from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Header = () => {
+    const [scroll, setScroll] = useState(false)
+
+    useEffect(() => {
+      function Scrolling() {
+        window.addEventListener("scroll", function () {
+            setScroll(window.scrollY > 300);
+        })
+      }
+
+      Scrolling()
+    })
+    
+
   return (
     <>
-        <header id="header" className='header'>
+        <header id="header" className={!scroll ? "header" : "header header-fixed"}>
             <div className="container">
                 <div className="logo">
                     <div className="image">
@@ -38,19 +51,19 @@ const Header = () => {
 
                         <ul>
                             <li className='red'>
-                                <Link href='/#rekomendasi' className='nav-link scrollto'>Rekomendasi</Link>
+                                <Link href='/#popular' scroll={false} className='nav-link scrollto'>Rekomendasi</Link>
                             </li>
                             <li>
-                                <Link href='/#service' className='nav-link scrollto'>Service</Link>
+                                <Link href='/#service' scroll={false} className='nav-link scrollto'>Service</Link>
                             </li>
                             <li>
-                                <Link href='/#about' className='nav-link scrollto'>Tentang Kami</Link>
+                                <Link href='/#about' scroll={false} className='nav-link scrollto'>Tentang Kami</Link>
                             </li>
                             <li>
-                                <Link href='/#menu' className='nav-link scrollto'>Menu</Link>
+                                <Link href='/#menu' scroll={false} className='nav-link scrollto'>Menu</Link>
                             </li>
                             <li>
-                                <Link href='/#chef' className='nav-link scrollto'>Koki</Link>
+                                <Link href='/#chef' scroll={false} className='nav-link scrollto'>Koki</Link>
                             </li>
                         </ul>
                     </div>

@@ -1,8 +1,10 @@
 import DataMenu from '@/public/DataMenu'
 import Link from 'next/link'
-import React from 'react'
+import React, {useState} from 'react'
 
 const Menu = () => {
+
+
     return (
         <section id='menu' className='menu'>
             <div className="container">
@@ -17,15 +19,15 @@ const Menu = () => {
                 </div>
 
                 <ul className="filter">
-                    <li className="filter-active" data-menu="all">
+                    <li className='filter-item' data-menu="all">
                         All Menu
                     </li>
 
-                    <li data-menu="food">
+                    <li className='filter-item' data-menu="food">
                         Food
                     </li>
 
-                    <li data-menu="drink">
+                    <li className='filter-item' data-menu="drink">
                         Drink
                     </li>
                 </ul>
@@ -50,7 +52,9 @@ const Menu = () => {
                                                 </h3>
                                             </a>
 
-                                            <p>Sed necessitatibus quam adipisci rerum dolore magnam ipsam. Eum vitae quia culpa consequatur adipisci modi. </p>
+                                            <p>Sed necessitatibus quam adipisci rerum dolore magnam ipsam. Eum vitae quia
+                                                culpa consequatur adipisci modi.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
