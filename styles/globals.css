@@ -541,7 +541,7 @@ button {
     background-color: var(--black);
 }
 
-.hero .contact-phone i {
+.hero .contact-phone svg {
     transform: scaleY(-1);
     margin-bottom: 10px;
 }
@@ -789,7 +789,7 @@ button {
     align-items: center;
 }
 
-.popular .content-popular .desc .rating i {
+.popular .content-popular .desc .rating svg {
     margin-left: 10px;
     color: var(--star);
 }
@@ -1094,7 +1094,7 @@ button {
     color: var(--tulip);
 }
 
-.service .content-info .desc a i {
+.service .content-info .desc a svg {
     margin-left: 10px;
 }
 
@@ -1251,7 +1251,7 @@ button {
     margin-bottom: 0;
 }
 
-.about .content-about .desc ul li i {
+.about .content-about .desc ul li svg {
     margin-right: 10px;
 }
 
@@ -1672,7 +1672,7 @@ button {
     z-index: 1;
 }
 
-.chef .content-chef .role i {
+.chef .content-chef .role svg {
     min-width: 50px;
     width: 50px;
     height: 50px;
@@ -1858,7 +1858,7 @@ button {
     color: var(--tulip);
 }
 
-.footer .foot-top .content-footer .list li a i {
+.footer .foot-top .content-footer .list li a svg {
     color: var(--tulip);
     width: 30px;
     display: inline-block;
@@ -2100,7 +2100,7 @@ button {
     color: var(--black);
 }
 
-.breadcumb .text .allstar i {
+.breadcumb .text .allstar svg {
     color: var(--star);
 }
 
@@ -2247,7 +2247,7 @@ button {
     font-size: 25px;
 }
 
-.food .content-food .rate i {
+.food .content-food .rate svg {
     color: var(--star);
 }
 
@@ -2263,7 +2263,7 @@ button {
     align-items: center;
 }
 
-.food .content-food .buy .text-buy i {
+.food .content-food .buy .text-buy svg {
     color: var(--tulip);
     margin-right: 10px;
 }
@@ -2454,7 +2454,7 @@ button {
     font-weight: 400;
 }
 
-.food .review .content-review .rate i {
+.food .review .content-review .rate svg {
     color: var(--star);
 }
 
@@ -2769,7 +2769,7 @@ button {
     font-weight: 400;
 }
 
-.allreview .content-review .rate i {
+.allreview .content-review .rate svg {
     color: var(--star);
 }
 

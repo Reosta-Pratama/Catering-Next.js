@@ -17,6 +17,13 @@ const Chef = () => {
       created() {
         setLoaded(true)
       },
+      slides: {
+        origin: "center",
+        perView: 4,
+        spacing: 15,
+      },
+      loop: true,
+      mode: "free-snap",
     })
 
     return (
@@ -37,7 +44,7 @@ const Chef = () => {
                         {
                             DataChef.map(function(item){
                                 return(
-                                    <div className="keen-slider__slide number-slide">
+                                    <div key={item.name} className="keen-slider__slide number-slide">
                                         <div className="item">
                                             <div className="content-chef">
                                                 <div className="image">

@@ -7,6 +7,14 @@ const DetailFood = () => {
     return (
         <section className='food'>
             <div className="container">
+                <div className="food-carousel">
+                    <div className="item">
+                        <div className="image">
+                            <img src="https://source.unsplash.com/random" alt="" className="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
                 <div className="row">
                     <div className="col-lg-6 left">
                         <div className="content-food">

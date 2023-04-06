@@ -1,6 +1,6 @@
 import DataMenu from '@/public/DataMenu'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faStar} from "@fortawesome/free-solid-svg-icons";
+import {faCaretRight, faClock, faCommentDots, faMapLocationDot, faPhoneVolume, faStar} from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link'
 import React from 'react'
 
@@ -34,7 +34,7 @@ const Footer = () => {
                                             return (
                                                 <li key={item.slug}>
                                                     <Link href={item.slug}>
-                                                        <i className="fa-solid fa-caret-right"></i>
+                                                        <FontAwesomeIcon icon={faCaretRight}></FontAwesomeIcon>
                                                         <span>{item.title}</span>
                                                     </Link>
                                                 </li>
@@ -54,25 +54,25 @@ const Footer = () => {
                                 <ul className="list">
                                     <li>
                                         <Link target="_blank" href="/">
-                                            <i className="fa-solid fa-map-location-dot"></i>
+                                            <FontAwesomeIcon icon={faMapLocationDot}></FontAwesomeIcon>
                                             <span>Jln. Ujung No. 997, Pasuruan 25229, Gorontalo</span>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link target="_blank" href="tel:082169076600">
-                                            <i className="fa-solid fa-phone-volume"></i>
+                                            <FontAwesomeIcon icon={faPhoneVolume}></FontAwesomeIcon>
                                             <span>082169076600</span>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link target="_blank" href="https://wa.me/082169076600">
-                                            <i className="fa-regular fa-comment-dots"></i>
+                                            <FontAwesomeIcon icon={faCommentDots}></FontAwesomeIcon>
                                             <span>082169076600</span>
                                         </Link>
                                     </li>
                                     <li className="">
                                         <Link href="/">
-                                            <i className="fa-regular fa-clock"></i>
+                                            <FontAwesomeIcon icon={faClock}></FontAwesomeIcon>
                                             <span>
                                                 24/7 Hours Service
                                             </span>
