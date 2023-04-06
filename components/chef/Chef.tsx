@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
-import KeenSlider from 'keen-slider'
 import { useKeenSlider } from "keen-slider/react"
+import DataChef from '@/public/DataChef'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faKitchenSet, faShareNodes, faStar } from '@fortawesome/free-solid-svg-icons'
 
 const Chef = () => {
     const [currentSlide, setCurrentSlide] = React.useState(0)
@@ -31,12 +34,45 @@ const Chef = () => {
 
                 <div className="navigation-wrapper">
                     <div ref={sliderRef} className="keen-slider">
-                        <div className="keen-slider__slide number-slide1">1</div>
-                        <div className="keen-slider__slide number-slide2">2</div>
-                        <div className="keen-slider__slide number-slide3">3</div>
-                        <div className="keen-slider__slide number-slide4">4</div>
-                        <div className="keen-slider__slide number-slide5">5</div>
-                        <div className="keen-slider__slide number-slide6">6</div>
+                        {
+                            DataChef.map(function(item){
+                                return(
+                                    <div className="keen-slider__slide number-slide">
+                                        <div className="item">
+                                            <div className="content-chef">
+                                                <div className="image">
+                                                    <img src={item.img} alt="" className='img-fluid'/>
+
+                                                    <ul>
+                                                        <li>
+                                                            <Link href="/"><FontAwesomeIcon icon={faShareNodes}></FontAwesomeIcon></Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/"><FontAwesomeIcon icon={faStar}></FontAwesomeIcon></Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/"><FontAwesomeIcon icon={faStar}></FontAwesomeIcon></Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/"><FontAwesomeIcon icon={faStar}></FontAwesomeIcon></Link>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div className="role">
+                                                    <FontAwesomeIcon icon={faKitchenSet}></FontAwesomeIcon>
+                                                    <h4>{item.role}</h4>
+                                                </div>
+
+                                                <div className="desc">
+                                                    <h3 className="name">{item.name}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>  
                 </div>
 
