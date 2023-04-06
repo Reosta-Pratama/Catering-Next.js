@@ -4,6 +4,11 @@ import React, {useState} from 'react'
 
 const Menu = () => {
 
+    const [isActive, setIsActive] = useState(false);
+
+    const handleClick = (event: any) => {
+        setIsActive(current => !current);
+    };
 
     return (
         <section id='menu' className='menu'>
@@ -19,15 +24,15 @@ const Menu = () => {
                 </div>
 
                 <ul className="filter">
-                    <li className='filter-item' data-menu="all">
+                    <li className={isActive ? 'filter-active' : ''} onClick={handleClick} data-menu="all">
                         All Menu
                     </li>
 
-                    <li className='filter-item' data-menu="food">
+                    <li className={isActive ? 'filter-active' : ''} onClick={handleClick} data-menu="food">
                         Food
                     </li>
 
-                    <li className='filter-item' data-menu="drink">
+                    <li className={isActive ? 'filter-active' : ''} onClick={handleClick} data-menu="drink">
                         Drink
                     </li>
                 </ul>
