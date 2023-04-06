@@ -6,9 +6,20 @@ const Menu = () => {
 
     const [isActive, setIsActive] = useState(false);
 
-    const handleClick = (event: any) => {
+    const handleClick = (event : any) => {
         setIsActive(current => !current);
     };
+
+    function ClickFilter(e: { currentTarget: { classList: { add: (arg0: string) => void; }; }; }) {
+        const boxes = document.querySelectorAll('.filter-item')
+        boxes.forEach(box => {
+            box
+                .classList
+                .remove('filter-active');
+        })
+
+        e.currentTarget.classList.add('filter-active')
+    }
 
     return (
         <section id='menu' className='menu'>
@@ -24,15 +35,15 @@ const Menu = () => {
                 </div>
 
                 <ul className="filter">
-                    <li className={isActive ? 'filter-active' : ''} onClick={handleClick} data-menu="all">
+                    <li className='filter-item' onClick={ClickFilter} data-menu="all">
                         All Menu
                     </li>
 
-                    <li className={isActive ? 'filter-active' : ''} onClick={handleClick} data-menu="food">
+                    <li className='filter-item' onClick={ClickFilter} data-menu="food">
                         Food
                     </li>
 
-                    <li className={isActive ? 'filter-active' : ''} onClick={handleClick} data-menu="drink">
+                    <li className='filter-item' onClick={ClickFilter} data-menu="drink">
                         Drink
                     </li>
                 </ul>
